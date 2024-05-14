@@ -83,26 +83,38 @@
     width: 64px;
     border-style: none;
     background-color: #00000008;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: 1px solid #00000030;
     border-right: 1px solid #00000030;
     border-bottom: 1px solid #00000030;
     margin-left: -1px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    position: relative;
+    transition: background-color 0.15s;
+    cursor: pointer;
 }
-
-.search:hover {
-    background-color: #00000010;
+.search .tool-tips {
+    position: absolute;
+    background-color: #00000060;
+    color: #ffffff;
+    font-weight: 400;
+    padding: 4px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity 0.15s,;
+    pointer-events: none;
 }
-
+.search:hover .tool-tips {
+    opacity: 1;
+}
 .search-icon {
     width: 23px;
 }
-
+.search:hover {
+    background-color: #00000010;
+}
 .mic-button {
     height: 39px;
     width: 39px;
@@ -115,6 +127,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.15s;
+    position: relative;
 }
 
 .mic-button:hover {
@@ -127,6 +141,21 @@
 
 .mic-icon {
     width: 23px;
+}
+.mic-button .tool-tips {
+    position: absolute;
+    background-color: #00000060;
+    bottom: -30px;
+    padding: 4px 6px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+.mic-button:hover .tool-tips {
+    opacity: 1;
 }
 .icon1 {
     width: 24px;
@@ -155,9 +184,24 @@
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    position: relative;
+    cursor: pointer;
 }
 .not-cont:hover {
     background-color: #00000010;
+}
+.not-cont .tool-tips {
+    background-color: #00000060;
+    position: absolute;
+    bottom: -35px;
+    font-size: 12px;
+    padding: 4px 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.15s;
+}
+.not-cont:hover .tool-tips {
+    opacity: 1;
 }
 .not-num {
     background-color: rgb(200, 0, 0);
@@ -178,8 +222,44 @@
     border-radius: 50px;
     width: 40px;
     height: 40px;
+    position: relative;
 }
 .icon-cont:hover {
     background-color: #00000010;
     cursor: pointer;
+}
+.icon-cont-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.icon-cont .tool-tips {
+    background-color: #00000060;
+    position: absolute;
+    bottom: -35px;
+    font-size: 12px;
+    padding: 4px 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+.icon-cont:hover .tool-tips {
+    opacity: 1;
+}
+.icon-cont-2 .tool-tips {
+    background-color: #00000060;
+    position: absolute;
+    bottom: -35px;
+    font-size: 12px;
+    padding: 4px 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+.icon-cont-2:hover .tool-tips {
+    opacity: 1;
 }
