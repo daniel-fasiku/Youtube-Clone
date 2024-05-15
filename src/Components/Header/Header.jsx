@@ -25,7 +25,7 @@ function Header() {
         </button>
         <button className='mic-button'>
           <img src={Mic} alt="mic" className='mic-icon' />
-          <div className='tool-tips'>Search with your voice</div>
+          <div className='tool-tips'>Microphone</div>
         </button>
       </div>
       <div className='rhd-section'>
