@@ -7,6 +7,7 @@
     bottom: 0;
     top: 70px;
     width: 80px;
+    z-index: 1;
 }
 .side-bar-element-container {
     height: 76px;
@@ -46,12 +47,12 @@
     column-gap: 13px;
     row-gap: 50px;
 }
-@media (max-width: 430px) {
+@media (max-width: 749px) {
     .video-grid {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (min-width: 431px) and (max-width: 1024px) {
+@media (min-width: 750px) and (max-width: 1024px) {
     .video-grid {
         grid-template-columns: 1fr 1fr 1fr;
     }
